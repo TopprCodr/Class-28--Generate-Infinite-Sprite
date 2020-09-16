@@ -1,12 +1,10 @@
 
 var player;
-var edges;
 var score=0;
 var wormGroup;
 
 function setup() {
 createCanvas(600,600);
-edges=createEdgeSprites();
 player = createSprite(40,550,30,30); 
 wormGroup= new Group();
 }
@@ -16,11 +14,6 @@ background("black");
 stroke("red")
 noFill();
 ellipse(100,350,40,30);
-player.bounceOff(edges[0]);
-player.bounceOff(edges[1]);
-player.bounceOff(edges[2]);
-player.bounceOff(edges[3]);
-
 player.x= mouseX;
 player.y= mouseY;
 
